@@ -40,6 +40,10 @@ int main(){
     printf("Digite o número de pontos turisticos da cidade.");
     scanf("%d", &num_pontos_turisticos);
 
+    // calculando a densidade populacional e o PIB percapta
+    float densidade_populacional = (float) populacao / area;
+    float pib_percapta = (float) pib / populacao;
+
 
     // mostrando a carta
     printf("\n");
@@ -47,11 +51,15 @@ int main(){
     printf("- Nome: %s\n", nome);
     printf("- Código: %s\n", cod_cidade);
     printf("- População:%d\n", populacao);
-    printf("- Área: %f\n", area);
+    printf("- Área: %.2f\n", area);
     printf("- PIB: %d\n", pib);
+    printf("- PIB Percapta: %.2f\n", pib_percapta);
+    printf("- Densidade populacional: %.3f\n", densidade_populacional);
     printf("- Números de pontos turisticos: %d\n", num_pontos_turisticos);
     printf("-+=                                           =+-\n");
     printf("\n");
+
+    
 
     return 0;
 }
